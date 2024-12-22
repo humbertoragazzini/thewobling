@@ -40,7 +40,11 @@ rgbeLoader.load("./urban_alley_01_1k.hdr", (environmentMap) => {
  * Wobble
  */
 // Material
-const material = new THREE.MeshPhysicalMaterial({
+const material = new CustomShaderMaterial({
+    //CSM
+    baseMaterial: THREE.MeshPhysicalMaterial,
+
+    //MeshPhysicalMaterial
     metalness: 0,
     roughness: 0.5,
     color: "#ffffff",
