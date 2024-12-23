@@ -6,7 +6,7 @@ import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js";
 import GUI from "lil-gui";
 import CustomShaderMaterial from "three-custom-shader-material/vanilla";
 import wobbleVertexShader from "./shaders/wobble/vertex.glsl";
-import wobleFragmentShader from "./shaders/wobble/fragment.glsl";
+import wobbleFragmentShader from "./shaders/wobble/fragment.glsl";
 /**
  * Base
  */
@@ -44,8 +44,9 @@ rgbeLoader.load("./urban_alley_01_1k.hdr", (environmentMap) => {
 const material = new CustomShaderMaterial({
     //CSM
     baseMaterial: THREE.MeshPhysicalMaterial,
-    vertexShader: wobleFragmentShader,
-    fragmentShader: wobleFragmentShader,
+    vertexShader: wobbleVertexShader,
+    fragmentShader: wobbleFragmentShader,
+    silent: true,
     //MeshPhysicalMaterial
     metalness: 0,
     roughness: 0.5,
