@@ -7,6 +7,7 @@ import GUI from "lil-gui";
 import CustomShaderMaterial from "three-custom-shader-material/vanilla";
 import wobbleVertexShader from "./shaders/wobble/vertex.glsl";
 import wobbleFragmentShader from "./shaders/wobble/fragment.glsl";
+import { mergeVertices } from "three/addons/utils/BufferGeometryUtils.js";
 /**
  * Base
  */
@@ -68,7 +69,7 @@ gui.addColor(material, "color");
 
 // Geometry
 const geometry = new THREE.IcosahedronGeometry(2.5, 50);
-
+geometry.computeTangents();
 // Mesh
 const wobble = new THREE.Mesh(geometry, material);
 wobble.receiveShadow = true;
