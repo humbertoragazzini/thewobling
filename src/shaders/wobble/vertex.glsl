@@ -1,3 +1,3 @@
+varying vec2 vUv;
 void main(){
-	csm_Position.y += 15.0;
 }
