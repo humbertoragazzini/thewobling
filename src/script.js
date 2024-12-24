@@ -54,6 +54,7 @@ const material = new CustomShaderMaterial({
     baseMaterial: THREE.MeshPhysicalMaterial,
     vertexShader: wobbleVertexShader,
     fragmentShader: wobbleFragmentShader,
+    uniforms: uniforms,
     silent: true,
     //MeshPhysicalMaterial
     metalness: 0,
@@ -69,6 +70,7 @@ const depthMaterial = new CustomShaderMaterial({
     //CSM
     baseMaterial: THREE.MeshDepthMaterial,
     vertexShader: wobbleVertexShader,
+    uniforms: uniforms,
     silent: true,
     // depthPacking
     depthPacking: THREE.RGBADepthPacking,
