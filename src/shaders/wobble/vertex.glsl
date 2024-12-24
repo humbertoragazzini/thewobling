@@ -23,4 +23,10 @@ void main(){
   //wobble
   float wobble = getWobble(csm_Position);
   csm_Position += wobble * normal;
+  positionA += getWobble(positionA) * normal;
+  positionB += getWobble(positionB) * normal; 
+
+  //compute normalized
+  vec3 toA = normalize(positionA-csm_Position);
+  vec3 toB = normalize(positionB-csm_Position);
 }
