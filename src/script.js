@@ -68,7 +68,8 @@ gui.add(material, "thickness", 0, 10, 0.001);
 gui.addColor(material, "color");
 
 // Geometry
-const geometry = new THREE.IcosahedronGeometry(2.5, 50);
+let geometry = new THREE.IcosahedronGeometry(2.5, 50);
+geometry = mergeVertices(geometry);
 geometry.computeTangents();
 // Mesh
 const wobble = new THREE.Mesh(geometry, material);
