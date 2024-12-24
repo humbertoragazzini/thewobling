@@ -62,8 +62,9 @@ const depthMaterial = new CustomShaderMaterial({
     //CSM
     baseMaterial: THREE.MeshDepthMaterial,
     vertexShader: wobbleVertexShader,
-    fragmentShader: wobbleFragmentShader,
     silent: true,
+    // depthPacking
+    depthPacking: THREE.RGBADepthPacking,
 });
 
 // Tweaks
@@ -80,6 +81,7 @@ geometry = mergeVertices(geometry);
 geometry.computeTangents();
 // Mesh
 const wobble = new THREE.Mesh(geometry, material);
+wobble.customDepthMaterial = depthMaterial;
 wobble.receiveShadow = true;
 wobble.castShadow = true;
 scene.add(wobble);
