@@ -58,6 +58,13 @@ const material = new CustomShaderMaterial({
     transparent: true,
     wireframe: false,
 });
+const depthMaterial = new CustomShaderMaterial({
+    //CSM
+    baseMaterial: THREE.MeshDepthMaterial,
+    vertexShader: wobbleVertexShader,
+    fragmentShader: wobbleFragmentShader,
+    silent: true,
+});
 
 // Tweaks
 gui.add(material, "metalness", 0, 1, 0.001);
