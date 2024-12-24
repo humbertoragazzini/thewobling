@@ -41,6 +41,13 @@ rgbeLoader.load("./urban_alley_01_1k.hdr", (environmentMap) => {
 /**
  * Wobble
  */
+// Uniforms
+const uniforms = {
+    uTime: new THREE.Uniform(0),
+    uPositionFrecuency: new THREE.Uniform(0.5),
+    uTimeFrecuency: new THREE.Uniform(0.4),
+    uStrength: new THREE.Uniform(0.3),
+};
 // Material
 const material = new CustomShaderMaterial({
     //CSM
