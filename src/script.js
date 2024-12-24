@@ -77,9 +77,9 @@ const depthMaterial = new CustomShaderMaterial({
 });
 
 // Tweaks
-gui.add(value, "value", 0, 1, 0.001);
-gui.add(value, "value", 0, 1, 0.001);
-gui.add(value, "value", 0, 1, 0.001);
+gui.add(value, "value", 0, 2, 0.001);
+gui.add(value, "value", 0, 2, 0.001);
+gui.add(value, "value", 0, 2, 0.001);
 gui.add(material, "roughness", 0, 1, 0.001);
 gui.add(material, "transmission", 0, 1, 0.001);
 gui.add(material, "ior", 0, 10, 0.001);
