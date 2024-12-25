@@ -80,13 +80,13 @@ const depthMaterial = new CustomShaderMaterial({
 gui.add(uniforms.uPositionFrecuency, "value", 0, 2, 0.001).name(
     "uPositionFrecuency"
 );
-gui.add(uniforms.uTimeFrecuency, "value", 0, 2, 0.001);
-gui.add(uniforms.uStrength, "value", 0, 2, 0.001);
-gui.add(material, "roughness", 0, 1, 0.001);
-gui.add(material, "transmission", 0, 1, 0.001);
-gui.add(material, "ior", 0, 10, 0.001);
-gui.add(material, "thickness", 0, 10, 0.001);
-gui.addColor(material, "color");
+gui.add(uniforms.uTimeFrecuency, "value", 0, 2, 0.001).name("uTimeFrecuency");
+gui.add(uniforms.uStrength, "value", 0, 2, 0.001).name("uStrength");
+gui.add(material, "roughness", 0, 1, 0.001).name("roughness");
+gui.add(material, "transmission", 0, 1, 0.001).name("transmission");
+gui.add(material, "ior", 0, 10, 0.001).name("ioe");
+gui.add(material, "thickness", 0, 10, 0.001).name("");
+gui.addColor(material, "color").name("");
 
 // Geometry
 let geometry = new THREE.IcosahedronGeometry(2.5, 50);
