@@ -77,9 +77,11 @@ const depthMaterial = new CustomShaderMaterial({
 });
 
 // Tweaks
-gui.add(uPositionFrecuency, "value", 0, 2, 0.001);
-gui.add(uTimeFrecuency, "value", 0, 2, 0.001);
-gui.add(uStrength, "value", 0, 2, 0.001);
+gui.add(uniforms.uPositionFrecuency, "value", 0, 2, 0.001).name(
+    "uPositionFrecuency"
+);
+gui.add(uniforms.uTimeFrecuency, "value", 0, 2, 0.001);
+gui.add(uniforms.uStrength, "value", 0, 2, 0.001);
 gui.add(material, "roughness", 0, 1, 0.001);
 gui.add(material, "transmission", 0, 1, 0.001);
 gui.add(material, "ior", 0, 10, 0.001);
