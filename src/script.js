@@ -186,6 +186,9 @@ const clock = new THREE.Clock();
 const tick = () => {
     const elapsedTime = clock.getElapsedTime();
 
+    //Materials
+    uniforms.uTime = elapsedTime;
+
     // Update controls
     controls.update();
 
