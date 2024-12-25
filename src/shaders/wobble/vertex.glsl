@@ -1,8 +1,8 @@
 
-float uniform uTime;
-float uniform uPositionFrecuency;
-float uniform uTimeFrecuency;
-float uniform uStrength;
+uniform float uTime;
+uniform float uPositionFrecuency;
+uniform float uTimeFrecuency;
+uniform float uStrength;
 
 attribute vec4 tangent;
 
@@ -11,10 +11,10 @@ attribute vec4 tangent;
 float getWobble(vec3 position){
   return simplexNoise4d(
         vec4(
-          position,
-          0.0
+          position*uPositionFrecuency,
+          uTime
         )
-      );
+      )*uStrength;
 }
 
 void main(){

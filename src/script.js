@@ -43,7 +43,7 @@ rgbeLoader.load("./urban_alley_01_1k.hdr", (environmentMap) => {
  */
 // Uniforms
 const uniforms = {
-    uTime: new THREE.Uniform(0),
+    uTime: new THREE.Uniform(0.0),
     uPositionFrecuency: new THREE.Uniform(0.5),
     uTimeFrecuency: new THREE.Uniform(0.4),
     uStrength: new THREE.Uniform(0.3),
@@ -187,7 +187,7 @@ const tick = () => {
     const elapsedTime = clock.getElapsedTime();
 
     //Materials
-    uniforms.uTime = elapsedTime;
+    uniforms.uTime.value = elapsedTime;
 
     // Update controls
     controls.update();
