@@ -3,16 +3,23 @@ uniform float uTime;
 uniform float uPositionFrecuency;
 uniform float uTimeFrecuency;
 uniform float uStrength;
+uniform float uWarpPositionFrecuency;
+uniform float uWarpTimeFrecuency;
+uniform float uWarpStrength;
+
 
 attribute vec4 tangent;
 
 #include ../includes/simplexNoise4d.glsl;
 
 float getWobble(vec3 position){
+  //WarpPosition
+  vec3 warpedPosition = position;
+  warpedPosition += simplexNoise4d(vec4(position,uTime));
   return simplexNoise4d(
         vec4(
-          position*uPositionFrecuency,
-          uTime
+          warpedPosition*uPositionFrecuency,
+          uTime * uTimeFrecuency
         )
       )*uStrength;
 }

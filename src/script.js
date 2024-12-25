@@ -47,6 +47,10 @@ const uniforms = {
     uPositionFrecuency: new THREE.Uniform(0.5),
     uTimeFrecuency: new THREE.Uniform(0.4),
     uStrength: new THREE.Uniform(0.3),
+
+    uWarpPositionFrecuency: new THREE.Uniform(0.5),
+    uWarpTimeFrecuency: new THREE.Uniform(0.4),
+    uWarpStrength: new THREE.Uniform(0.3),
 };
 // Material
 const material = new CustomShaderMaterial({
