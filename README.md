@@ -1,6 +1,6 @@
 # thewobling MiniProject - Humberto Ragazzini
 
-This is an example of environment map updating infinity times with a mesh and geometry rotatin in the Z axis making the effect of a studio light, this effect has been used in the project PrimalPort website: [thewobling](https://humbertoragazzini.github.io/thewobling/dist/)
+This is an example of environment map updating infinity times with a mesh and geometry rotatin in the Z axis making the effect of a studio light, this effect has been used in the project PrimalPort website: [thewobling](https://humbertoragazzini.github.io/thewobling/)
 
 # **Frameworks and Tecnologies**
 
@@ -24,7 +24,7 @@ This is an example of environment map updating infinity times with a mesh and ge
 3. In this tab select settings.
 4. Click in pages in the option menu.
 5. Select in source branch master.
-6. Save, the project is deployed in github pages in the following link:[thewobling](https://humbertoragazzini.github.io/thewobling/dist/)
+6. Save, the project is deployed in github pages in the following link:[thewobling](https://humbertoragazzini.github.io/thewobling/)
 
 ## **To clone my repository in github**
 
